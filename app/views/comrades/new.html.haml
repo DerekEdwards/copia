@@ -1,0 +1,10 @@
+=render :partial => "shared/header"
+
+.col-sm-12
+  =simple_form_for @comrade do |f|
+    =f.input :name
+    =f.input :email
+    =f.button :submit
+
+          
+   
