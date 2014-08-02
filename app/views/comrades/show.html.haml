@@ -1,10 +1,7 @@
 =render :partial => "shared/header"
 
 .col-sm-3
-  .row.h1  
-    =@comrade.name
-  .row.h3
-    =@comrade.email
+  =render :partial => "shared/comrade_panel"
 
 .col-sm-9
   .panel.panel-primary
@@ -17,7 +14,7 @@
           -@comrade.items.each do |item|
             %tr
               %td.h3
-                =item.name
+                =link_to item.name, item_path(item)
               %td 
                 =item.desc 
           
