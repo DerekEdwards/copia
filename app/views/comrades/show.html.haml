@@ -1,0 +1,24 @@
+=render :partial => "shared/header"
+
+.col-sm-3
+  .row.h1  
+    =@comrade.name
+  .row.h3
+    =@comrade.email
+
+.col-sm-9
+  .panel.panel-primary
+    .panel-heading
+      .h2
+        ="Inventory"
+    .panel-body
+      %table.table-striped.table-hover
+        %table-body
+          -@comrade.items.each do |item|
+            %tr
+              %td.h3
+                =item.name
+              %td 
+                =item.desc 
+          
+   
