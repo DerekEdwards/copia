@@ -1,0 +1,10 @@
+.h1
+  ="Comrades and their items"
+-@comrades.each do |c|
+  .h3
+    =c.name
+  -c.items.each do |item|
+    .p
+      =item.name
+
+  
