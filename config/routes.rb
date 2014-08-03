@@ -20,7 +20,13 @@ Rails.application.routes.draw do
     resources :items, shallow: true 
   end 
 
-  resources :transactions 
+  resources :transactions do
+    member do
+      get 'mark_denied'
+      get 'mark_current'
+      get 'mark_complete'
+    end
+  end
 
   # Example resource route with options:
   #   resources :products do

@@ -3,6 +3,16 @@
     .panel-heading
       .h2
         =@transaction.requestee.name + "'s " + @transaction.item.name
+        -if @transaction.status == Transaction::REQUESTED
+          .btn.btn-default.pull-right
+            =link_to "Accept", mark_current_transaction_path(@transaction)
+
+          .btn.btn-default.pull-right
+            =link_to " Deny ", mark_denied_transaction_path(@transaction)
+
+        -if @transaction.status == Transaction::CURRENT
+          .btn.btn-default.pull-right
+            =link_to "Mark as Complete", mark_complete_transaction_path(@transaction)
     .panel-body
       .col-sm-4
         %ul.list-group

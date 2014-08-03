@@ -14,7 +14,7 @@
           -@comrade.from_transactions.each do |transaction|
             %tr
               %td.h3
-                =link_to transaction.item.name, item_path(transaction.item)
+                =link_to transaction.item.name, transaction_path(transaction)
               %td 
                 =transaction.item.desc 
 
@@ -28,7 +28,7 @@
           -@comrade.to_transactions.each do |transaction|
             %tr
               %td.h3
-                =link_to transaction.item.name, item_path(transaction.item)
+                =link_to transaction.item.name, transaction_path(transaction)
               %td 
                 =transaction.item.desc 
 
