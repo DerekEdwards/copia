@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     resources :items, shallow: true 
   end 
 
+  resources :transactions 
+
   # Example resource route with options:
   #   resources :products do
   #     member do

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comrade_id: 
+  text: MyText
+
+two:
+  comrade_id: 
+  text: MyText

@@ -1,0 +1,12 @@
+=render :partial => "shared/header"
+
+="Checkout " + @item.comrade.name + "'s " + @item.name + "."
+
+.col-sm-12
+  =simple_form_for @transaction do |f|
+    =f.input :requestor
+    =f.input :item, :as => :hidden, :input_html => {:value => @item.id.to_s}
+    =f.button :submit
+
+          
+   
