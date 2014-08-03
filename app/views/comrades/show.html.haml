@@ -8,6 +8,8 @@
     .panel-heading
       .h2
         ="Inventory"
+        .btn.btn-default.pull-right
+          =link_to "Add Item", new_comrade_item_path(@comrade)
     .panel-body
       %table.table-striped.table-hover
         %table-body
@@ -17,5 +19,3 @@
                 =link_to item.name, item_path(item)
               %td 
                 =item.desc 
-          
-   

@@ -4,7 +4,7 @@
   ="Comrades and their items"
 -@comrades.each do |c|
   .h3
-    =c.name
+    =link_to c.name, comrade_path(c)
   -c.items.each do |item|
     .p
       =item.name

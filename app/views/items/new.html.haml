@@ -1,0 +1,10 @@
+=render :partial => "shared/header"
+
+.col-sm-12
+  =simple_form_for(@item, :url => comrade_items_path(@comrade.id)) do |f|
+    =f.input :name
+    =f.input :desc
+    =f.button :submit
+
+          
+   
