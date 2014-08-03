@@ -8,5 +8,7 @@
     .panel-heading
       .h2
         =@item.name
+        .btn.btn-default.pull-right
+          =link_to "Request Item", new_transaction_path(item: @item.id)
     .panel-body
       =@item.desc

@@ -7,6 +7,34 @@
   .panel.panel-primary
     .panel-heading
       .h2
+        ="Incoming Requests"
+    .panel-body
+      %table.table-striped.table-hover
+        %table-body
+          -@comrade.from_transactions.each do |transaction|
+            %tr
+              %td.h3
+                =link_to transaction.item.name, item_path(transaction.item)
+              %td 
+                =transaction.item.desc 
+
+  .panel.panel-primary
+    .panel-heading
+      .h2
+        ="My Requests"
+    .panel-body
+      %table.table-striped.table-hover
+        %table-body
+          -@comrade.to_transactions.each do |transaction|
+            %tr
+              %td.h3
+                =link_to transaction.item.name, item_path(transaction.item)
+              %td 
+                =transaction.item.desc 
+
+  .panel.panel-primary
+    .panel-heading
+      .h2
         ="Inventory"
         .btn.btn-default.pull-right
           =link_to "Add Item", new_comrade_item_path(@comrade)

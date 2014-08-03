@@ -4,3 +4,18 @@
   %h1 SHAREVSKY
   %p Welcome to SHAREVSKY, comrades!
   %img{alt: "Welcome!", src: "http://1.bp.blogspot.com/-ahUHdjl7AVY/UZYIPmTmkRI/AAAAAAAAHxk/8d_t0NOC_9c/s1600/vintage-soviet-workers-propaganda.jpg"}/
+
+%center
+  .h2.pull-center
+    ="Brave Comrades!"
+  =" * "
+  -Comrade.all.each do |c|
+    =link_to c.name, comrade_path(c) 
+    =" * "
+%br
+%br
+%center  
+  .row
+    .btn.btn-default
+      =link_to "Join the Revolution!", new_comrade_path
+   
